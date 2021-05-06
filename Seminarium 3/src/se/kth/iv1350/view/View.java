@@ -12,8 +12,6 @@ public class View {
 	public View(Controller controller) {
 		this.controller = controller;
 		
-		//hardcoded values here
-		
 		System.out.println("Starting a new sale");
 		controller.beginSale();
 		

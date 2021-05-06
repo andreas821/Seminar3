@@ -23,13 +23,13 @@ class SaleDTOTest {
 		SaleDTO testSaleDTO = new SaleDTO(itemPrice, itemVAT, testListOfItems);
 		
 		int resultPrice = testSaleDTO.getTotalPrice();
-		assertEquals(itemPrice, resultPrice, "Expected price and resulting price are equal");
+		assertEquals(itemPrice, resultPrice, "Expected price and resulting price are not equal");
 		
 		int resultVAT = testSaleDTO.getVAT();
-		assertEquals(itemVAT, resultVAT, "Expected VAT and resulting VAT are equal");
+		assertEquals(itemVAT, resultVAT, "Expected VAT and resulting VAT are not equal");
 		
 		List<ItemDTO> resultListOfItems = testSaleDTO.getItems();
-		assertEquals(testListOfItems, resultListOfItems, "Expected list of items and resulting list of items are equal");
+		assertEquals(testListOfItems, resultListOfItems, "Expected list of items and resulting list of items are not equal");
 		
 	}
 

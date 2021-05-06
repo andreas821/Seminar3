@@ -30,8 +30,8 @@ class SaleProcessingTest {
 		int expectedVAT = itemToBeScanned.getVAT() * scanItemQuantity;
 		int resultVat = saleData.getVAT();
 		
-		assertEquals(expectedPrice, resultPrice, "Expected price and resulting price are equal");
-		assertEquals(expectedVAT, resultVat, "Expected VAT and resulting VAT are equal");
+		assertEquals(expectedPrice, resultPrice, "Expected price and resulting price are not equal");
+		assertEquals(expectedVAT, resultVat, "Expected VAT and resulting VAT are not equal");
 		
 	}
 	
@@ -56,8 +56,8 @@ class SaleProcessingTest {
 		int expectedVAT = itemToBeScanned.getVAT() * scanItemQuantity;
 		int resultVat = saleData.getVAT();
 		
-		assertEquals(expectedPrice, resultPrice, "Expected price and resulting price are equal");
-		assertEquals(expectedVAT, resultVat, "Expected VAT and resulting VAT are equal");
+		assertEquals(expectedPrice, resultPrice, "Expected price and resulting price are not equal");
+		assertEquals(expectedVAT, resultVat, "Expected VAT and resulting VAT are not equal");
 	}
 
 }
