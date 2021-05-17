@@ -6,7 +6,7 @@ public class SaleDTO {
 
 	private int totalPrice;
 	private int vat;
-	private List<ItemDTO> items;
+	private List<ItemQuantityDTO> items;
 	
 	/**
 	 * Creates a instance representing a sale
@@ -15,7 +15,7 @@ public class SaleDTO {
 	 * @param vat The amount of VAT
 	 * @param items A list of items in the sale
 	 */
-	public SaleDTO(int totalPrice, int vat, List<ItemDTO> items) {
+	public SaleDTO(int totalPrice, int vat, List<ItemQuantityDTO> items) {
 		this.totalPrice = totalPrice;
 		this.vat = vat;
 		this.items = items;
@@ -44,7 +44,7 @@ public class SaleDTO {
 	 *  
 	 * @return A list of items purchased
 	 */
-	public List<ItemDTO> getItems(){
+	public List<ItemQuantityDTO> getItems(){
 		return items;
 	}
 	

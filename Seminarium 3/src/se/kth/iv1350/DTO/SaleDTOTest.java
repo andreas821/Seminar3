@@ -17,8 +17,8 @@ class SaleDTOTest {
 		
 		ItemDTO testItem = new ItemDTO(itemPrice, itemVAT, itemDescription);
 		
-		List<ItemDTO> testListOfItems = new ArrayList<ItemDTO>();
-		testListOfItems.add(testItem);
+		List<ItemQuantityDTO> testListOfItems = new ArrayList<ItemQuantityDTO>();
+		testListOfItems.add(new ItemQuantityDTO( testItem, 1));
 		
 		SaleDTO testSaleDTO = new SaleDTO(itemPrice, itemVAT, testListOfItems);
 		
@@ -28,7 +28,7 @@ class SaleDTOTest {
 		int resultVAT = testSaleDTO.getVAT();
 		assertEquals(itemVAT, resultVAT, "Expected VAT and resulting VAT are not equal");
 		
-		List<ItemDTO> resultListOfItems = testSaleDTO.getItems();
+		List<ItemQuantityDTO> resultListOfItems = testSaleDTO.getItems();
 		assertEquals(testListOfItems, resultListOfItems, "Expected list of items and resulting list of items are not equal");
 		
 	}

@@ -20,6 +20,7 @@ public class View {
 		
 		System.out.println("Scanning item " + firstItemToScan);
 		ItemDTO itemDTO = controller.scanItem(firstItemToScan, 1);
+		
 		System.out.println("Item price :" + itemDTO.getPrice());
 		System.out.println("Item VAT :" + itemDTO.getVAT());
 		System.out.println("Item Description :" + itemDTO.getDescription());

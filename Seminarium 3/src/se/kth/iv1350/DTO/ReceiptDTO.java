@@ -8,7 +8,7 @@ public class ReceiptDTO {
 	private int time;
 	private String storeName;
 	private String storeAddress;
-	private List<ItemDTO> listOfItems; //change
+	private List<ItemQuantityDTO> listOfItems;
 	private int totalPrice;
 	private int vat;
 	private int amountPaid;
@@ -25,10 +25,10 @@ public class ReceiptDTO {
 	 * @param totalPrice The total price of the sale
 	 * @param vat The VAT
 	 * @param amountPaid The amount of cash paid
-	 * @param change The amount of cnahge returned
+	 * @param change The amount of change returned
 	 * 
 	 */
-	public ReceiptDTO(int date, int time, String storeName, String storeAddress, List<ItemDTO> listOfItems, int totalPrice, int vat, int amountPaid, int change) {
+	public ReceiptDTO(int date, int time, String storeName, String storeAddress, List<ItemQuantityDTO> listOfItems, int totalPrice, int vat, int amountPaid, int change) {
 		this.date = date;
 		this.time = time;
 		this.storeName = storeName;
@@ -81,7 +81,7 @@ public class ReceiptDTO {
 	 *  
 	 * @return A list of items purchased
 	 */
-	public List<ItemDTO> getListOfItems(){
+	public List<ItemQuantityDTO> getListOfItems(){
 		return listOfItems;
 	}
 	
